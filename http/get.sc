@@ -15,3 +15,10 @@ requests.get(
   "http://httpbin.org/headers",
   headers = Map("user-agent" -> "data's demo")
 ).text
+
+
+// $ curl -X GET "http://httpbin.org/drip?duration=2&numbytes=10"
+requests.get(
+  "http://httpbin.org/drip",
+  params = Map("duration" -> "2", "numbytes" -> "10")
+).text
